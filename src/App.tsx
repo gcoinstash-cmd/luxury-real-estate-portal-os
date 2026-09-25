@@ -524,7 +524,7 @@ export default function App() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`relative py-1 text-[10px] uppercase font-mono tracking-[0.25em] transition-all cursor-pointer ${
+                className={`relative py-1 text-xs font-semibold tracking-wider uppercase font-mono tracking-[0.25em] transition-all cursor-pointer ${
                   activeTab === tab.id
                     ? 'text-gold-400 font-medium'
                     : 'text-neutral-500 hover:text-neutral-300'
@@ -567,7 +567,7 @@ export default function App() {
             {/* Subtle Minimalist Outline '[CONFIGURE]' Button */}
             <button
               onClick={() => setActiveTab('dashboard')}
-              className="px-4 py-2 bg-transparent hover:bg-white/[0.02] border border-white/10 hover:border-gold-500/25 rounded-md text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-400 hover:text-[#E5D3B3] transition-all duration-300 cursor-pointer"
+              className="px-4 py-2 bg-transparent hover:bg-white/[0.02] border border-white/10 hover:border-gold-500/25 rounded-md text-xs font-semibold tracking-wider font-mono uppercase tracking-[0.2em] text-neutral-400 hover:text-[#E5D3B3] transition-all duration-300 cursor-pointer"
               id="top-action-portal"
             >
               Configure
@@ -744,20 +744,20 @@ export default function App() {
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-light">
+                <p className="text-base font-semibold text-neutral-400 leading-relaxed font-light">
                   {selectedPropertyForModal.description}
                 </p>
 
                 {/* Exclusive Structural Amenities list */}
                 <div className="space-y-4">
-                  <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest block border-b border-neutral-900 pb-2">
+                  <span className="font-mono text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest block border-b border-neutral-900 pb-2">
                     Exclusive Structural Amenities
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {selectedPropertyForModal.amenities.map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-neutral-950 border border-neutral-900 text-neutral-300 text-[10px] font-sans rounded-full"
+                        className="px-3 py-1 bg-neutral-950 border border-neutral-900 text-neutral-300 text-xs font-semibold tracking-wider font-sans rounded-full"
                       >
                         ✓ {item}
                       </span>
@@ -823,7 +823,7 @@ export default function App() {
 
               <form onSubmit={handleInquirySubmit} className="space-y-4">
                 <div className="flex flex-col space-y-1">
-                  <label className="font-sans text-[10px] text-neutral-500 font-medium uppercase tracking-wider">
+                  <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium uppercase tracking-wider">
                     Full Name
                   </label>
                   <input
@@ -837,7 +837,7 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                  <label className="font-sans text-[10px] text-neutral-500 font-medium uppercase tracking-wider">
+                  <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium uppercase tracking-wider">
                     Secure Email Link
                   </label>
                   <input
@@ -851,7 +851,7 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                  <label className="font-sans text-[10px] text-neutral-500 font-medium uppercase tracking-wider">
+                  <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium uppercase tracking-wider">
                     Confidential Message
                   </label>
                   <textarea
@@ -866,7 +866,7 @@ export default function App() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#1D170F] hover:bg-[#2C2114] text-[#E5D3B3] text-xs font-mono uppercase tracking-widest border border-gold-500/25 rounded-md transition-colors font-medium flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-[#1D170F] hover:bg-[#2C2114] text-[#E5D3B3] text-base font-semibold min-h-[44px] font-mono uppercase tracking-widest border border-gold-500/25 rounded-md transition-colors font-medium flex items-center justify-center gap-2"
                 >
                   <Send className="w-3.5 h-3.5 text-gold-400" />
                   <span>Log Lead Request</span>
@@ -934,7 +934,7 @@ export default function App() {
               >
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Target Date</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Target Date</label>
                     <input
                       type="date"
                       value={showDate}
@@ -944,7 +944,7 @@ export default function App() {
                     />
                   </div>
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Target Time</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Target Time</label>
                     <input
                       type="time"
                       value={showTime}
@@ -956,7 +956,7 @@ export default function App() {
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                  <label className="font-sans text-[10px] text-neutral-500 font-medium">Private Requests</label>
+                  <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Private Requests</label>
                   <textarea
                     rows={3}
                     placeholder="Helicopter helipad booking coordinates, security details..."
@@ -968,7 +968,7 @@ export default function App() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-mono uppercase tracking-widest border border-neutral-800 rounded-md transition-all font-medium flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-neutral-900 hover:bg-neutral-800 text-white text-base font-semibold min-h-[44px] font-mono uppercase tracking-widest border border-neutral-800 rounded-md transition-all font-medium flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-3.5 h-3.5 text-gold-400" />
                   <span>Secure Time Coordinates</span>

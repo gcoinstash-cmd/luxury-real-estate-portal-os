@@ -170,7 +170,7 @@ export function Concierge({ properties, triggerToast }: ConciergeProps) {
                   <button
                     key={i}
                     onClick={() => handleSendMessage(prompt)}
-                    className="p-2.5 bg-[#050505] hover:bg-[#120F0B] border border-neutral-900 hover:border-gold-500/15 text-[10px] text-neutral-400 hover:text-[#E5D3B3] rounded text-left transition-all block truncate"
+                    className="p-2.5 bg-[#050505] hover:bg-[#120F0B] border border-neutral-900 hover:border-gold-500/15 text-xs font-semibold tracking-wider text-neutral-400 hover:text-[#E5D3B3] rounded text-left transition-all block truncate"
                   >
                     ✦ {prompt}
                   </button>
@@ -199,7 +199,7 @@ export function Concierge({ properties, triggerToast }: ConciergeProps) {
               <button
                 type="submit"
                 disabled={isSending || !inputMsg.trim()}
-                className="bg-[#1C1812] hover:bg-[#2A2318] border border-gold-500/20 text-gold-400 hover:text-white px-4 py-2.5 rounded transition-all flex items-center justify-center shrink-0 disabled:opacity-40 cursor-pointer"
+                className="bg-[#1C1812] hover:bg-[#2A2318] border border-gold-500/20 text-gold-400 hover:text-white px-5 py-3 min-h-[44px].5 rounded transition-all flex items-center justify-center shrink-0 disabled:opacity-40 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
               </button>
@@ -213,7 +213,7 @@ export function Concierge({ properties, triggerToast }: ConciergeProps) {
             <h4 className="font-display text-sm font-medium text-white flex items-center gap-2">
               <Building className="w-4 h-4 text-gold-400" /> Active Directory Registry
             </h4>
-            <p className="text-[11px] text-neutral-500 font-sans mt-1 leading-relaxed">
+            <p className="text-xs font-semibold text-neutral-500 font-sans mt-1 leading-relaxed">
               These properties are fully indexed and formatted for real-time contextual queries by the AI Concierge.
             </p>
           </div>
@@ -246,7 +246,7 @@ export function Concierge({ properties, triggerToast }: ConciergeProps) {
             <span className="font-mono text-[8px] text-gold-400 uppercase tracking-widest block font-semibold mb-1">
               Broker Advisory Notice
             </span>
-            <p className="text-[10px] text-neutral-400 font-sans leading-relaxed">
+            <p className="text-xs font-semibold tracking-wider text-neutral-400 font-sans leading-relaxed">
               Adding new properties in the <strong>CRM Board</strong> automatically extends this agent's catalog and refreshes the grounding weights in real-time.
             </p>
           </div>

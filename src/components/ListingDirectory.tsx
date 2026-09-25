@@ -151,7 +151,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
               
               {/* Location Selector */}
               <div className="flex flex-col space-y-2">
-                <label className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
+                <label className="font-mono text-sm font-semibold tracking-wider text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" /> Region / State
                 </label>
                 <div className="grid grid-cols-2 gap-2 mt-2">
@@ -173,7 +173,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
 
               {/* Price Cap Threshold Slider */}
               <div className="flex flex-col space-y-2">
-                <label className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest flex items-center justify-between">
+                <label className="font-mono text-sm font-semibold tracking-wider text-neutral-500 uppercase tracking-widest flex items-center justify-between">
                   <span className="flex items-center gap-1.5"><DollarSign className="w-3.5 h-3.5" /> Maximum Budget</span>
                   <span className="text-[#E5D3B3] font-mono text-xs">
                     {(priceRange / 1000000).toFixed(1)}M USD
@@ -189,7 +189,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
                     onChange={(e) => setPriceRange(Number(e.target.value))}
                     className="w-full accent-gold-500 cursor-pointer h-1 bg-neutral-900 rounded-lg appearance-none"
                   />
-                  <div className="flex justify-between text-[10px] text-neutral-700 font-mono mt-1 pt-1">
+                  <div className="flex justify-between text-xs font-semibold tracking-wider text-neutral-700 font-mono mt-1 pt-1">
                     <span>$2.0M</span>
                     <span>$8.5M</span>
                     <span>$15.0M</span>
@@ -199,7 +199,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
 
               {/* Beds / Rooms Count */}
               <div className="flex flex-col space-y-2">
-                <label className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
+                <label className="font-mono text-sm font-semibold tracking-wider text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
                   <Home className="w-3.5 h-3.5" /> Minimum Bedrooms
                 </label>
                 <div className="flex gap-2 mt-2">
@@ -227,7 +227,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
                       <button
                         key={st}
                         onClick={() => setStatusFilter(st)}
-                        className={`flex-1 py-1 text-[10px] uppercase font-mono rounded-sm transition-colors ${
+                        className={`flex-1 py-1 text-xs font-semibold tracking-wider uppercase font-mono rounded-sm transition-colors ${
                           statusFilter === st
                             ? 'bg-neutral-900 text-gold-400'
                             : 'text-neutral-500 hover:text-neutral-300'
@@ -242,7 +242,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
 
               {/* Exclusive Amenities checklist */}
               <div className="flex flex-col space-y-2">
-                <label className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">
+                <label className="font-mono text-sm font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">
                   Exclusive Amenities
                 </label>
                 <div className="flex flex-wrap gap-1.5 h-36 overflow-y-auto pr-1 mt-2 border border-neutral-900 bg-[#0B0B0B] p-2 rounded-sm scrollbar-thin">
@@ -270,12 +270,12 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
 
             {/* Bottom Actions Row */}
             <div className="flex items-center justify-between px-6 py-4 bg-[#0A0A0A] border-t border-neutral-900">
-              <span className="text-[10px] text-neutral-500 font-mono">
+              <span className="text-xs font-semibold tracking-wider text-neutral-500 font-mono">
                 Matching Properties Found: <span className="text-neutral-300">{filteredProperties.length}</span>
               </span>
               <button
                 onClick={handleResetFilters}
-                className="flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition-colors py-1.5 px-3 uppercase font-mono tracking-widest text-[9px]"
+                className="flex items-center gap-1.5 text-base font-semibold min-h-[44px] text-neutral-500 hover:text-neutral-300 transition-colors py-1.5 px-3 uppercase font-mono tracking-widest text-[9px]"
               >
                 <X className="w-3.5 h-3.5" />
                 <span>Reset Filters</span>
@@ -305,7 +305,7 @@ export function ListingDirectory({ properties, onInquire, onSchedule, onViewDeta
           </p>
           <button
             onClick={handleResetFilters}
-            className="mt-6 px-5 py-2 text-xs font-mono tracking-widest uppercase bg-neutral-900 hover:bg-neutral-800 text-gold-400 border border-neutral-800 rounded-sm"
+            className="mt-6 px-5 py-2 text-base font-semibold min-h-[44px] font-mono tracking-widest uppercase bg-neutral-900 hover:bg-neutral-800 text-gold-400 border border-neutral-800 rounded-sm"
           >
             Clear Selected Criteria
           </button>

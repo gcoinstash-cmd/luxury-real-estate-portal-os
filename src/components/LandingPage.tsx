@@ -42,7 +42,7 @@ export function LandingPage({
             className="flex items-center gap-2 px-3 py-1 bg-gold-950/20 border border-gold-500/10 rounded-full"
           >
             <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-            <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-gold-300">
+            <span className="font-mono text-xs font-semibold tracking-wider tracking-[0.3em] uppercase text-gold-300">
               Exclusive Sanctuary Tech Portfolio
             </span>
           </motion.div>
@@ -76,7 +76,7 @@ export function LandingPage({
           >
             <button
               onClick={onExplore}
-              className="group flex items-center justify-center gap-2 w-full sm:w-52 py-3.5 px-6 font-display font-medium text-xs uppercase tracking-widest bg-gold-500 hover:bg-gold-600 text-black border border-transparent rounded-sm transition-all duration-300 shadow-lg shadow-gold-500/10"
+              className="group flex items-center justify-center gap-2 w-full sm:w-52 py-3.5 px-6 font-display font-medium text-base font-semibold min-h-[44px] uppercase tracking-widest bg-gold-500 hover:bg-gold-600 text-black border border-transparent rounded-sm transition-all duration-300 shadow-lg shadow-gold-500/10"
               id="hero-explore-btn"
             >
               <span>Explore Portfolio</span>
@@ -84,7 +84,7 @@ export function LandingPage({
             </button>
             <button
               onClick={onPortal}
-              className="flex items-center justify-center w-full sm:w-52 py-3.5 px-6 font-display font-normal text-xs uppercase tracking-widest bg-[#0A0A0A] hover:bg-[#121212] text-neutral-400 hover:text-white border border-neutral-900 hover:border-neutral-800 rounded-sm transition-all duration-350"
+              className="flex items-center justify-center w-full sm:w-52 py-3.5 px-6 font-display font-normal text-base font-semibold min-h-[44px] uppercase tracking-widest bg-[#0A0A0A] hover:bg-[#121212] text-neutral-400 hover:text-white border border-neutral-900 hover:border-neutral-800 rounded-sm transition-all duration-350"
               id="hero-portal-btn"
             >
               Configure Portal
@@ -102,19 +102,19 @@ export function LandingPage({
           >
             <div>
               <span className="font-display text-2xl font-normal text-white">8.4M+</span>
-              <p className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Average valuation</p>
+              <p className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">Average valuation</p>
             </div>
             <div>
               <span className="font-display text-2xl font-normal text-white">100%</span>
-              <p className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Sovereign Privacy</p>
+              <p className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">Sovereign Privacy</p>
             </div>
             <div>
               <span className="font-display text-2xl font-normal text-white">24hr</span>
-              <p className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Broker Concierge</p>
+              <p className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">Broker Concierge</p>
             </div>
             <div>
               <span className="font-display text-2xl font-normal text-white">99.8%</span>
-              <p className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Contract Integrity</p>
+              <p className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">Contract Integrity</p>
             </div>
           </motion.div>
         </div>
@@ -138,7 +138,7 @@ export function LandingPage({
               <h2 className="font-display text-3xl sm:text-4xl font-light text-white tracking-tight leading-tight">
                 Refining physical form into monolithic sculpture.
               </h2>
-              <p className="font-sans text-xs sm:text-sm text-neutral-400 leading-relaxed font-light space-y-4">
+              <p className="font-sans text-base font-semibold text-neutral-400 leading-relaxed font-light space-y-4">
                 We believe that premium buildings should be more than living spaces. They are quiet monuments intended to isolate residents from the kinetic friction of modern cities. Our selected listings stand out for raw architectural truth: hand-honed travertine walls, blackened structural steel plates, and hidden layouts that favor sensory relief.
               </p>
               <div className="h-0.5 bg-neutral-900 w-24 pt-1" />
@@ -187,7 +187,7 @@ export function LandingPage({
             </div>
             <button
               onClick={onExplore}
-              className="flex items-center gap-1.5 text-xs text-gold-400 hover:text-white transition-colors uppercase font-mono tracking-widest mt-2"
+              className="flex items-center gap-1.5 text-base font-semibold min-h-[44px] text-gold-400 hover:text-white transition-colors uppercase font-mono tracking-widest mt-2"
               id="view-all-landing-btn"
             >
               <span>View Full Catalog</span>
@@ -219,7 +219,7 @@ export function LandingPage({
             <h2 className="font-display text-3xl font-light text-white tracking-tight mt-2">
               Modular Integration Capabilities
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-500 font-light mt-3 leading-relaxed">
+            <p className="text-base font-semibold text-neutral-500 font-light mt-3 leading-relaxed">
               Designed as a premium developer asset. Quickly adjust features to secure commercial, multifamily, or high-worth bespoke townhouse community clients.
             </p>
           </div>
@@ -269,20 +269,20 @@ export function LandingPage({
           <h2 className="font-display text-3xl sm:text-4xl font-light text-white tracking-tight mt-3 mb-6">
             Ready to deploy for bespoke architectural client contracts?
           </h2>
-          <p className="text-xs sm:text-sm text-neutral-400 font-light max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-base font-semibold text-neutral-400 font-light max-w-xl mx-auto mb-10 leading-relaxed">
             Gain immediate access to full database state synchronizations, appointment bookings, and file uploads. Register as a broker or premium buyer now.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={onPortal}
-              className="px-8 py-3.5 bg-neutral-100 hover:bg-white text-neutral-950 text-xs font-mono uppercase tracking-widest rounded-sm transition-colors duration-300 w-full sm:w-auto font-semibold"
+              className="px-8 py-3.5 bg-neutral-100 hover:bg-white text-neutral-950 text-base font-semibold min-h-[44px] font-mono uppercase tracking-widest rounded-sm transition-colors duration-300 w-full sm:w-auto font-semibold"
               id="cta-join-btn"
             >
               Sign In To Portal
             </button>
             <button
               onClick={onExplore}
-              className="px-8 py-3.5 bg-neutral-950 hover:bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-900 rounded-sm text-xs font-mono uppercase tracking-widest transition-colors duration-300 w-full sm:w-auto"
+              className="px-8 py-3.5 bg-neutral-950 hover:bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-900 rounded-sm text-base font-semibold min-h-[44px] font-mono uppercase tracking-widest transition-colors duration-300 w-full sm:w-auto"
               id="cta-explore-btn"
             >
               Browse Catalog
@@ -302,7 +302,7 @@ export function LandingPage({
               Zen-Minimalist flagship template v1.0.0
             </p>
           </div>
-          <div className="flex gap-6 mt-2 sm:mt-0 font-mono text-[10px] text-neutral-600 tracking-wider">
+          <div className="flex gap-6 mt-2 sm:mt-0 font-mono text-xs font-semibold tracking-wider text-neutral-600 tracking-wider">
             <a href="#landing-page-module" className="hover:text-neutral-400 transition-colors uppercase">Top</a>
             <span>•</span>
             <span className="uppercase">Licence: Hardcoded Dark Domain</span>

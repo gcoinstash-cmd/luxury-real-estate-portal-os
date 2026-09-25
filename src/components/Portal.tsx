@@ -263,18 +263,18 @@ export function Portal({
                   <h3 className="font-display text-lg font-medium text-white">Confidential Document Records</h3>
                   <p className="text-xs text-neutral-500 font-sans mt-1">Upload and catalog transaction sheets or lease agreement PDFs.</p>
                 </div>
-                <span className="font-mono text-[10px] text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
+                <span className="font-mono text-xs font-semibold tracking-wider text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
                   {documents.length} Files Enrolled
                 </span>
               </div>
 
               {/* Upload PDF Form (Simulated File Select) */}
               <form onSubmit={handleDocumentSubmit} className="bg-[#050505] border border-neutral-900 p-5 rounded-md space-y-4">
-                <h4 className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">Register Legal Contract Reference</h4>
+                <h4 className="font-mono text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">Register Legal Contract Reference</h4>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Document Description</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Document Description</label>
                     <input
                       type="text"
                       placeholder="e.g. Townhouse Lease Block B, Deed"
@@ -286,7 +286,7 @@ export function Portal({
                   </div>
 
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Agreement Category</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Agreement Category</label>
                     <select
                       value={docCategory}
                       onChange={(e) => setDocCategory(e.target.value)}
@@ -339,7 +339,7 @@ export function Portal({
                             type="button"
                             onClick={() => handleSmartAudit(doc)}
                             disabled={isAuditingDocId !== null}
-                            className="font-mono text-[10px] bg-[#120F0B] text-gold-400 border border-gold-500/20 px-3 py-1 rounded-sm hover:bg-[#E5D3B3] hover:text-black transition-all cursor-pointer disabled:opacity-50 flex items-center gap-1.5"
+                            className="font-mono text-xs font-semibold tracking-wider bg-[#120F0B] text-gold-400 border border-gold-500/20 px-3 py-1 rounded-sm hover:bg-[#E5D3B3] hover:text-black transition-all cursor-pointer disabled:opacity-50 flex items-center gap-1.5"
                           >
                             {isAuditingDocId === doc.id ? (
                               <>
@@ -355,7 +355,7 @@ export function Portal({
                             href={doc.fileUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-mono text-[10px] text-neutral-400 hover:text-white transition-colors px-3 py-1 bg-neutral-900 rounded-sm border border-neutral-800"
+                            className="font-mono text-xs font-semibold tracking-wider text-neutral-400 hover:text-white transition-colors px-3 py-1 bg-neutral-900 rounded-sm border border-neutral-800"
                           >
                             DOWNLOAD PDF
                           </a>
@@ -380,7 +380,7 @@ export function Portal({
                   <h3 className="font-display text-lg font-medium text-white">Digital Maintenance Tickets</h3>
                   <p className="text-xs text-neutral-500 font-sans mt-1">Tenant dispatch interface for urgent repair coordinates.</p>
                 </div>
-                <span className="font-mono text-[10px] text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
+                <span className="font-mono text-xs font-semibold tracking-wider text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
                   {maintenanceRequests.length} Scheduled
                 </span>
               </div>
@@ -388,11 +388,11 @@ export function Portal({
               {/* Tenant File ticket Form */}
               {activeUserRole === 'client' ? (
                 <form onSubmit={handleMaintenanceSubmit} className="bg-[#050505] border border-neutral-900 p-6 rounded-md space-y-4">
-                  <h4 className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">Submit New Service Ticket</h4>
+                  <h4 className="font-mono text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">Submit New Service Ticket</h4>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col space-y-1">
-                      <label className="font-sans text-[10px] text-neutral-500 font-medium">Selected Asset Property</label>
+                      <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Selected Asset Property</label>
                       <select
                         value={mProperty}
                         onChange={(e) => setMProperty(e.target.value)}
@@ -407,7 +407,7 @@ export function Portal({
                     </div>
 
                     <div className="flex flex-col space-y-1">
-                      <label className="font-sans text-[10px] text-neutral-500 font-medium">Urgency Classification</label>
+                      <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Urgency Classification</label>
                       <select
                         value={mUrgency}
                         onChange={(e) => setMUrgency(e.target.value as any)}
@@ -422,7 +422,7 @@ export function Portal({
                   </div>
 
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Brief Target Summary</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Brief Target Summary</label>
                     <input
                       type="text"
                       placeholder="e.g. Geothermal climate control heater resetting intermittently"
@@ -434,7 +434,7 @@ export function Portal({
                   </div>
 
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Full Repair Specifications</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Full Repair Specifications</label>
                     <textarea
                       placeholder="Input comprehensive technical details. Include physical access keys context..."
                       rows={3}
@@ -447,7 +447,7 @@ export function Portal({
 
                   <button
                     type="submit"
-                    className="flex items-center gap-2 px-6 py-2.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-xs uppercase tracking-wider font-mono text-gold-400 hover:text-white rounded-md transition-all duration-300"
+                    className="flex items-center gap-2 px-6 py-2.5 bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-base font-semibold min-h-[44px] uppercase tracking-wider font-mono text-gold-400 hover:text-white rounded-md transition-all duration-300"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>File Ticket</span>
@@ -481,13 +481,13 @@ export function Portal({
                               }`}>
                                 {req.urgency} Priority
                               </span>
-                              <span className="font-mono text-[10px] text-neutral-600">ID: {req.id}</span>
+                              <span className="font-mono text-xs font-semibold tracking-wider text-neutral-600">ID: {req.id}</span>
                             </div>
 
                             <h4 className="font-display text-base font-medium text-white leading-snug">{req.title}</h4>
                             <p className="text-xs text-neutral-400 leading-relaxed font-light">{req.description}</p>
                             
-                            <div className="text-[10px] text-neutral-500 font-sans flex items-center gap-1.5 pt-1">
+                            <div className="text-xs font-semibold tracking-wider text-neutral-500 font-sans flex items-center gap-1.5 pt-1">
                               <span className="text-neutral-400">{associatedProp?.title || 'Luxury Estate Link'}</span>
                               <span>•</span>
                               <span>{req.createdAt instanceof Date ? req.createdAt.toLocaleDateString() : 'Confidential Date'}</span>
@@ -497,7 +497,7 @@ export function Portal({
                           {/* Status and Action Buttons for Broker */}
                           <div className="flex flex-col justify-between items-start md:items-end gap-3 shrink-0">
                             <div className="flex items-center gap-2">
-                              <span className="font-sans text-[10px] text-neutral-500">Status:</span>
+                              <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500">Status:</span>
                               <span className={`font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-sm ${
                                 req.status === 'pending' ? 'bg-neutral-950 border border-neutral-800 text-neutral-400' :
                                 req.status === 'scheduled' ? 'bg-[#1D170C] border border-gold-500/20 text-[#E5D3B3]' :
@@ -545,18 +545,18 @@ export function Portal({
                   <h3 className="font-display text-lg font-medium text-white">Private Consultation Log</h3>
                   <p className="text-xs text-neutral-500 font-sans mt-1">Book private showcase viewing times or schedule custom contract reviews.</p>
                 </div>
-                <span className="font-mono text-[10px] text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
+                <span className="font-mono text-xs font-semibold tracking-wider text-neutral-400 bg-neutral-950 border border-neutral-900 px-3 py-1 rounded-sm">
                   {appointments.length} Appointments Listed
                 </span>
               </div>
 
               {/* Showings Request Form */}
               <form onSubmit={handleAppointmentSubmit} className="bg-[#050505] border border-neutral-900 p-6 rounded-md space-y-4">
-                <h4 className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">Book Digital Consultation/Showing</h4>
+                <h4 className="font-mono text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">Book Digital Consultation/Showing</h4>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Selected Asset Property</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Selected Asset Property</label>
                     <select
                       value={aProperty}
                       onChange={(e) => setAProperty(e.target.value)}
@@ -571,7 +571,7 @@ export function Portal({
                   </div>
 
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Target Showcase Date</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Target Showcase Date</label>
                     <input
                       type="date"
                       value={aDate}
@@ -582,7 +582,7 @@ export function Portal({
                   </div>
 
                   <div className="flex flex-col space-y-1">
-                    <label className="font-sans text-[10px] text-neutral-500 font-medium">Target Time Slot</label>
+                    <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Target Time Slot</label>
                     <input
                       type="time"
                       value={aTime}
@@ -594,7 +594,7 @@ export function Portal({
                 </div>
 
                 <div className="flex flex-col space-y-1">
-                  <label className="font-sans text-[10px] text-neutral-500 font-medium">Private Concierge Notes (Optional)</label>
+                  <label className="font-sans text-sm font-semibold tracking-wider text-neutral-500 font-medium">Private Concierge Notes (Optional)</label>
                   <input
                     type="text"
                     placeholder="Provide bespoke specifications (e.g., helicopter arrival time, beverage preferences, dietary flags)..."
@@ -606,7 +606,7 @@ export function Portal({
 
                 <button
                   type="submit"
-                  className="flex items-center gap-2 px-6 py-2.5 bg-[#1C1812] hover:bg-[#2A2318] text-[#E5D3B3] text-xs font-mono uppercase tracking-widest border border-gold-500/25 rounded-md transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-2.5 bg-[#1C1812] hover:bg-[#2A2318] text-[#E5D3B3] text-base font-semibold min-h-[44px] font-mono uppercase tracking-widest border border-gold-500/25 rounded-md transition-all duration-300"
                 >
                   <CalendarDays className="w-4 h-4 text-gold-400" />
                   <span>Request Booking</span>
@@ -640,7 +640,7 @@ export function Portal({
                               {appt.datetime instanceof Date ? appt.datetime.toLocaleString() : String(appt.datetime)}
                             </p>
                             {appt.notes && (
-                              <p className="text-[11px] text-neutral-500 italic max-w-lg mt-1 font-sans">
+                              <p className="text-xs font-semibold text-neutral-500 italic max-w-lg mt-1 font-sans">
                                 Notes: "{appt.notes}"
                               </p>
                             )}
@@ -651,13 +651,13 @@ export function Portal({
                             <div className="flex gap-2 shrink-0 self-end sm:self-center">
                               <button
                                 onClick={() => onUpdateAppointmentStatus(appt.id, 'confirmed')}
-                                className="px-3 py-1 bg-emerald-950/30 border border-emerald-900/40 text-emerald-400 text-[10px] font-mono uppercase rounded-sm hover:bg-emerald-900/20"
+                                className="px-3 py-1 bg-emerald-950/30 border border-emerald-900/40 text-emerald-400 text-xs font-semibold tracking-wider font-mono uppercase rounded-sm hover:bg-emerald-900/20"
                               >
                                 Accept
                               </button>
                               <button
                                 onClick={() => onUpdateAppointmentStatus(appt.id, 'cancelled')}
-                                className="px-3 py-1 bg-neutral-950 border border-neutral-800 text-neutral-400 text-[10px] font-mono uppercase rounded-sm hover:text-white"
+                                className="px-3 py-1 bg-neutral-950 border border-neutral-800 text-neutral-400 text-xs font-semibold tracking-wider font-mono uppercase rounded-sm hover:text-white"
                               >
                                 Decline
                               </button>
@@ -753,7 +753,7 @@ export function Portal({
               <span className="font-mono text-[8px] text-neutral-500 uppercase tracking-widest font-semibold block">
                 Cryptographic Integrity & Signature
               </span>
-              <p className="text-[10px] text-[#E5D3B3] leading-relaxed font-mono">
+              <p className="text-xs font-semibold tracking-wider text-[#E5D3B3] leading-relaxed font-mono">
                 {auditedReport.securityCompliance}
               </p>
             </div>

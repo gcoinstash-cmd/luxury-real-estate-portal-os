@@ -88,7 +88,7 @@ export function PropertyCard({ property, onInquire, onSchedule, onViewDetails }:
             <div className="font-mono text-xs font-semibold text-neutral-200">
               {property.bedrooms}
             </div>
-            <div className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">
+            <div className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">
               Beds
             </div>
           </div>
@@ -96,7 +96,7 @@ export function PropertyCard({ property, onInquire, onSchedule, onViewDetails }:
             <div className="font-mono text-xs font-semibold text-neutral-200">
               {property.bathrooms}
             </div>
-            <div className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">
+            <div className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">
               Baths
             </div>
           </div>
@@ -105,7 +105,7 @@ export function PropertyCard({ property, onInquire, onSchedule, onViewDetails }:
               {property.sqft.toLocaleString()}
               <Maximize className="w-2.5 h-2.5 opacity-40" />
             </div>
-            <div className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest mt-1">
+            <div className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest mt-1">
               Sq Ft
             </div>
           </div>

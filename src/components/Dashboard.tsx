@@ -205,7 +205,7 @@ export function Dashboard({
             <div className="flex items-center gap-1.5 bg-[#050505] border border-neutral-800 p-1 rounded-md">
               <button
                 onClick={() => onSwitchRole('client')}
-                className={`px-3 py-1.5 rounded text-[10px] uppercase font-mono tracking-wider transition-all duration-300 ${
+                className={`px-3 py-1.5 rounded text-xs font-semibold tracking-wider uppercase font-mono tracking-wider transition-all duration-300 ${
                   activeUserRole === 'client'
                     ? 'bg-[#1C1812] text-[#E5D3B3] border border-gold-500/20'
                     : 'text-neutral-500 hover:text-neutral-300'
@@ -216,7 +216,7 @@ export function Dashboard({
               </button>
               <button
                 onClick={() => onSwitchRole('broker')}
-                className={`px-3 py-1.5 rounded text-[10px] uppercase font-mono tracking-wider transition-all duration-300 ${
+                className={`px-3 py-1.5 rounded text-xs font-semibold tracking-wider uppercase font-mono tracking-wider transition-all duration-300 ${
                   activeUserRole === 'broker'
                     ? 'bg-[#1C1812] text-[#E5D3B3] border border-gold-500/20'
                     : 'text-neutral-500 hover:text-neutral-300'
@@ -231,7 +231,7 @@ export function Dashboard({
             {!auth.currentUser ? (
               <button
                 onClick={onConnectGoogleAuth}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#15130F] hover:bg-[#201C15] text-gold-400 hover:text-gold-200 border border-gold-500/20 rounded-md text-[10px] font-mono uppercase tracking-wider transition-colors duration-200"
+                className="flex items-center gap-1.5 px-5 py-3 min-h-[44px] bg-[#15130F] hover:bg-[#201C15] text-gold-400 hover:text-gold-200 border border-gold-500/20 rounded-md text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono uppercase tracking-wider transition-colors duration-200"
                 id="connect-google-auth-btn"
               >
                 <Link2 className="w-3.5 h-3.5" />
@@ -260,7 +260,7 @@ export function Dashboard({
         
         <div className="bg-[#080808] border border-neutral-900 rounded-md p-6 space-y-2 text-left">
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest">
+            <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">
               Total Managed Assets
             </span>
             <DollarSign className="w-4 h-4 text-gold-400" />
@@ -275,7 +275,7 @@ export function Dashboard({
 
         <div className="bg-[#080808] border border-neutral-900 rounded-md p-6 space-y-2 text-left">
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest">
+            <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">
               Consultation Load
             </span>
             <CalendarCheck className="w-4 h-4 text-gold-400" />
@@ -290,7 +290,7 @@ export function Dashboard({
 
         <div className="bg-[#080808] border border-neutral-900 rounded-md p-6 space-y-2 text-left">
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest">
+            <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">
               Open Leases / Inquiries
             </span>
             <Inbox className="w-4 h-4 text-gold-400" />
@@ -305,7 +305,7 @@ export function Dashboard({
 
         <div className="bg-[#080808] border border-neutral-900 rounded-md p-6 space-y-2 text-left">
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[10px] text-neutral-500 uppercase tracking-widest">
+            <span className="font-sans text-xs font-semibold tracking-wider text-neutral-500 uppercase tracking-widest">
               Site Dispatches Filed
             </span>
             <Layers className="w-4 h-4 text-gold-400" />
@@ -356,7 +356,7 @@ export function Dashboard({
                 id="add-property-form"
               >
                 <div className="flex justify-between items-center border-b border-neutral-900 pb-2">
-                  <span className="font-mono text-[10px] text-gold-400 uppercase tracking-widest">
+                  <span className="font-mono text-xs font-semibold tracking-wider text-gold-400 uppercase tracking-widest">
                     Register New Luxury Asset
                   </span>
                   <button type="button" onClick={() => setShowAddProperty(false)} className="text-neutral-500 hover:text-white">
@@ -453,7 +453,7 @@ export function Dashboard({
                     onChange={(e) => setAmenitiesText(e.target.value)}
                     className="bg-[#0D0D0D] border border-neutral-800 text-xs text-neutral-300 py-2 px-3 rounded-md focus:outline-none focus:border-gold-500/30"
                   />
-                  <span className="text-[10px] text-neutral-600 block mt-0.5">Separate with commas. Empty defaults to elite architectural indicators.</span>
+                  <span className="text-xs font-semibold tracking-wider text-neutral-600 block mt-0.5">Separate with commas. Empty defaults to elite architectural indicators.</span>
                 </div>
 
                 <div className="flex flex-col space-y-1">
@@ -475,7 +475,7 @@ export function Dashboard({
                       Gemini Portfolio Copywriter & Pricing Intelligence
                     </span>
                   </div>
-                  <p className="text-[10px] text-neutral-400 leading-relaxed font-sans">
+                  <p className="text-xs font-semibold tracking-wider text-neutral-400 leading-relaxed font-sans">
                     Auto-synthesizes high-end, brutalist architectural descriptions and selects 5 exclusive amenities using Gemini models. Fill in the Title, Price, or Location above first.
                   </p>
                   
@@ -487,14 +487,14 @@ export function Dashboard({
                         placeholder="e.g. glass pavilion, raw granite slab, desert modernist"
                         value={aiCustomPrompt}
                         onChange={(e) => setAiCustomPrompt(e.target.value)}
-                        className="bg-[#050505] border border-neutral-900 text-[10px] text-neutral-300 py-1 px-2.5 rounded-sm focus:outline-none focus:border-gold-500/35"
+                        className="bg-[#050505] border border-neutral-900 text-xs font-semibold tracking-wider text-neutral-300 py-1 px-2.5 rounded-sm focus:outline-none focus:border-gold-500/35"
                       />
                     </div>
                     <button
                       type="button"
                       onClick={handleAIGenerate}
                       disabled={isGeneratingAI}
-                      className="px-4 py-1.5 bg-[#251E14] hover:bg-[#32281A] text-[#E5D3B3] text-[10px] font-mono uppercase tracking-wider rounded-md border border-gold-500/20 disabled:opacity-50 transition-all shrink-0 cursor-pointer w-full md:w-auto"
+                      className="px-4 py-1.5 bg-[#251E14] hover:bg-[#32281A] text-[#E5D3B3] text-base font-semibold min-h-[44px] font-semibold tracking-wider font-mono uppercase tracking-wider rounded-md border border-gold-500/20 disabled:opacity-50 transition-all shrink-0 cursor-pointer w-full md:w-auto"
                     >
                       {isGeneratingAI ? "AUTO-GENERATING..." : "OPTIMIZE COPY WITH AI"}
                     </button>
@@ -503,7 +503,7 @@ export function Dashboard({
 
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-gold-400 hover:bg-gold-500 text-black font-display font-medium text-xs uppercase tracking-widest rounded-md transition-colors"
+                  className="px-6 py-2 bg-gold-400 hover:bg-gold-500 text-black font-display font-medium text-base font-semibold min-h-[44px] uppercase tracking-widest rounded-md transition-colors"
                 >
                   Write to Firestore Database
                 </button>
@@ -523,7 +523,7 @@ export function Dashboard({
                     />
                     <div>
                       <span className="font-display text-sm font-normal text-white">{p.title}</span>
-                      <span className="font-sans text-[11px] text-neutral-500 block mt-0.5 leading-none">
+                      <span className="font-sans text-xs font-semibold text-neutral-500 block mt-0.5 leading-none">
                         📍 {p.location}
                       </span>
                     </div>
@@ -582,7 +582,7 @@ export function Dashboard({
                       <span className="font-mono text-[8px] uppercase text-neutral-600 block tracking-wider leading-none">
                         Topic Asset:
                       </span>
-                      <span className="text-[11px] font-sans text-neutral-300 font-normal leading-normal mt-1 block">
+                      <span className="text-xs font-semibold font-sans text-neutral-300 font-normal leading-normal mt-1 block">
                         {targetProp?.title || 'Exclusive Plot Link'}
                       </span>
                     </div>
